@@ -1,7 +1,7 @@
 <template>
   <q-page class="q-pa-xl">
     <section class="q-mb-xl">
-      <div class="text-h4">QFrm Component</div>
+      <div class="text-h4">QForm Component</div>
       <q-separator class="q-my-md" />
       <div style="max-width: 600px">
         <q-form
@@ -91,6 +91,9 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useQuasar } from 'quasar';
+
+const $q = useQuasar();
 
 const myForm = ref(null);
 
@@ -128,9 +131,22 @@ const reset = () => {
 const onSubmit = () => {
   if (form.value.accept !== 'Agreed') {
     alert('동의 해주세요.!!');
-  } else {
-    alert('성공~!');
+    return;
   }
+
+  $q.loading.show({
+    // {
+    // delay: 0,
+    // message: '로 딩 중 ...',
+    // spinnerSize: 40,
+    // spinnerColor: 'red',
+    // }
+  });
+
+  setTimeout(() => {
+    $q.loading.hide();
+    alert('성공~!');
+  }, 3000);
 };
 
 const onReset = () => {

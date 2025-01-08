@@ -5,6 +5,7 @@ import { defineConfig } from '#q-app/wrappers';
 // import vue from '@vitejs/plugin-vue';
 import vueDevTools from 'vite-plugin-vue-devtools';
 import Components from 'unplugin-vue-components/vite';
+// import { Loading } from 'quasar';
 
 export default defineConfig((/* ctx */) => {
   return {
@@ -14,7 +15,13 @@ export default defineConfig((/* ctx */) => {
     // app boot file (/src/boot)
     // --> boot files are part of "main.js"
     // https://v2.quasar.dev/quasar-cli-vite/boot-files
-    boot: ['constants', 'initialization'],
+    boot: [
+      'constants',
+      'initialization',
+      'loading-plugin',
+      'loading-bar-plugin',
+      'quasar-lang-pack',
+    ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
     css: ['app.scss'],
@@ -96,10 +103,17 @@ export default defineConfig((/* ctx */) => {
         screen: {
           bodyClasses: true, // <<< add this
         },
+        // Loading: {
+        //   delay: 0,
+        //   message: '로 딩 중 ...',
+        //   spinnerSize: 40,
+        //   spinnerColor: 'red',
+        // },
       },
 
       // iconSet: 'material-icons', // Quasar icon set
       // lang: 'en-US', // Quasar language pack
+      lang: 'ko-KR',
 
       // For special cases outside of where the auto-import strategy can have an impact
       // (like functional components as one of the examples),
@@ -109,7 +123,7 @@ export default defineConfig((/* ctx */) => {
       // directives: [],
 
       // Quasar plugins
-      plugins: ['LocalStorage'],
+      plugins: ['LocalStorage', 'Loading', 'LoadingBar'],
     },
 
     // animations: 'all', // --- includes all animations
