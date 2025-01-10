@@ -21,6 +21,7 @@ export default defineConfig((/* ctx */) => {
       'loading-plugin',
       'loading-bar-plugin',
       'quasar-lang-pack',
+      'i18n',
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-file#css
