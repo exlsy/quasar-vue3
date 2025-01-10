@@ -6,7 +6,7 @@ A Quasar Project
 
 https://vercel.com/exlsys-projects/quasar-vue3
 
-https://quasar-vue3-c39vyq1l7-exlsys-projects.vercel.app
+https://quasar-vue3.vercel.app/
 
 ## Install the dependencies
 
