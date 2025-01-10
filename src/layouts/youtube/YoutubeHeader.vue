@@ -71,13 +71,16 @@ const isSearchFocus = ref(false);
 // }
 .q-toolbar {
   height: 56px;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #c9c9c9;
 }
 .search {
   min-width: 100px;
   max-width: 500px;
   width: 55%;
   &-btn {
-    border: solid;
+    border-style: solid;
     border-width: 1px 1px 1px 0px;
     border-color: #c9c9c9;
     max-width: 60px;
