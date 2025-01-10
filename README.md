@@ -2,6 +2,12 @@
 
 A Quasar Project
 
+# 확인해보기
+
+https://vercel.com/exlsys-projects/quasar-vue3
+
+https://quasar-vue3-c39vyq1l7-exlsys-projects.vercel.app
+
 ## Install the dependencies
 
 ```bash
